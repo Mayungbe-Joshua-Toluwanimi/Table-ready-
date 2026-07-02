@@ -1,0 +1,250 @@
+:root {
+  --primary-color: #2e7d32;
+  /* --primary-color: #3fa34d; */
+  /* --primary-color: #4caf50; */
+  --accent-color: #f59e0b;
+  /* --accent-color: #ff9f1c; */
+  /* --accent-color: #fb923c; */
+  --background-color: #fafaf8;
+  --text-primary: #1e1f20;
+  --text-secondary: /*#6b7280*/#1e1f20;
+  --heading-font: manrope;
+  --body-font: inter;
+  --container-padding: 2rem;
+}
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.hero .cta-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7px;
+  margin: 1rem 0 1rem;
+}
+.secondary-cta {
+  padding: 7px;
+  font-weight: bold;
+  border: 1px solid var(--accent-color);
+  display: block;
+  border-radius: 1rem;
+  text-align: center;
+}
+.primary-cta {
+  padding: 5px;
+  font-weight: bold;
+  background: var(--accent-color);
+  color: white;
+  display: block;
+  border-radius: 1rem;
+  text-align: center;
+}
+.container {
+  padding: var(--container-padding);
+}
+.emphasize {
+  font-weight: bold;
+}
+h1,h2,h3,h4 {
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+section {
+  margin: 2rem 0;
+}
+h2 {
+  text-align: center;
+  margin: 1rem;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  background: var(--background-color);
+  font-family: var(--body-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+p {
+  margin: 0.6rem 0;
+}
+.card {
+  /* border: 1px solid black; */
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgb(30, 31, 32, 0.5);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+/*header*/
+header {
+  /* padding: var(--container-padding); */
+  padding-top: 1rem;
+}
+.nav-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+  /* padding: 1rem; */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+nav.show-on-lg {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: grey;
+  border-radius: 5rem;
+  /* width: 80%; */
+  /* margin: auto; */
+}
+nav.show-on-lg ul {
+  display: flex;
+}
+nav.show-on-lg ul li a {
+  padding: 10px;
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  margin-top: 2rem;
+}
+.hero-txt {
+  width: 100%;
+}
+h1 {
+  line-height: 1.2;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.hero-img img{
+  width: 100%;
+  height: 100%;
+  /* object-fit: ; */
+}
+
+/*Main*/
+.image-container {
+  /* width: 100%; */
+  height: 400px;
+  position: relative;
+  /* border: 1px solid black; */
+}
+.image-container img {
+  /* display: none; */
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgb(30, 31, 32, 0.5);
+  margin: 2rem 0; /*Edit this on lg screen*/
+}
+.image-container #img-1 {
+  top: 0;
+  left: 0;
+  width: 60%;
+}
+.image-container #img-2 {
+  width: 60%;
+  top: 30%;
+  left: 30%;
+  z-index: -1;
+}
+/*Benefits section*/
+#benefits .card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.card {
+  /* border: 1px solid black; */
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 12px rgb(30, 31, 32, 0.5);
+}
+.card img {
+  width: 100%;
+  border-radius: 12px;
+}
+/*Testimonial section*/
+#testimonials {
+
+}
+.testifier-info {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  gap: 1rem;
+}
+.testifier-info div {
+  /* border: 1px solid; */
+  justify-content: center;
+}
+.testifier-info p {
+  margin: 0;
+}
+.testifier-info img {
+  border-radius: 50%;
+  /* border: 1px solid ; */
+  height: 60px;
+  width: 60px;
+}
+/*Breakpoints*/
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 3rem;
+  }
+  .show-on-mobile {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  h1 {
+    line-height: 1.2;
+    font-size: 3rem;
+    margin: 1rem 0;
+  }
+  .hero .cta-container {
+    grid-template-columns: 40% 60%;
+    gap: 10px;
+    margin: 1rem 0 1rem;
+  }
+}
+@media (max-width: 768px) {
+  nav.show-on-lg {
+    display: none;
+  }
+}
+
