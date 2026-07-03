@@ -184,20 +184,38 @@ h1 {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-.card {
-  /* border: 1px solid black; */
-  padding: 1rem;
-  border-radius: 1rem;
-  background-color: white;
-  box-shadow: 0 4px 12px rgb(30, 31, 32, 0.5);
-}
-.card img {
-  width: 100%;
-  border-radius: 12px;
-}
 /*Testimonial section*/
 #testimonials {
 
+}
+.testimony-container {
+  /* position: relative; */
+  /* border: 1px solid; */
+}
+.slides {
+  position: relative;
+  min-height: 15rem;
+  width: 100%;
+  border: 1px solid;
+}
+.slide {
+  margin: 2rem 0;
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+}
+.btn {
+  /* position: absolute; */
+  font-size: 1.5rem;
+  z-index: 10;
+  background: none;
+  margin: 1rem 1rem 0;
 }
 .testifier-info {
   margin-top: 1rem;
@@ -217,6 +235,9 @@ h1 {
   /* border: 1px solid ; */
   height: 60px;
   width: 60px;
+}
+.active {
+  display: block;
 }
 /*Breakpoints*/
 @media (min-width: 768px) {
