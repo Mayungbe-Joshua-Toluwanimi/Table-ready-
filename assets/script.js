@@ -1,3 +1,7 @@
+/*
+=========
+Testimonial carousel
+========= */
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('#prev-btn');
 const nextBtn = document.querySelector('#next-btn');
@@ -25,3 +29,19 @@ nextBtn.addEventListener('click', () => {
   showSlide(currentSlide);
 })
 showSlide(currentSlide);
+
+/*
+=============
+Side nav
+============= */
+const sideNav = document.querySelector('.side-nav');
+const showNavBtn = document.querySelector('#show-nav-btn');
+const hideNavBtn = document.querySelector('#hide-nav-btn');
+showNavBtn.addEventListener('click', showNav);
+hideNavBtn.addEventListener('click', hideNav);
+function showNav() {
+  sideNav.classList.add('active');
+}
+function hideNav () {
+  sideNav.classList.remove('active');
+}
